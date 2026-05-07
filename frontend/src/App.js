@@ -2,12 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { 
   PieChart, Pie, Cell, 
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer,
+  XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer,
   LineChart, Line
 } from "recharts";
 import { 
   UploadCloud, CheckCircle, AlertTriangle, 
-  FileText, Activity, ShieldAlert, RefreshCw,
+  FileText, Activity, ShieldAlert,
   Search, Download, Cpu, Database, Network, GitMerge, Layout, Code
 } from "lucide-react";
 import "./App.css";
@@ -92,7 +92,7 @@ function App() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("fake-review-detector-production-cd23.up.railway.app", formData);
+      const response = await axios.post("https://fake-review-backend-0ehk.onrender.com/analyze", formData);
       setResults(response.data);
       addToast(`Successfully analyzed ${response.data.length} reviews.`, "success");
     } catch (error) {
