@@ -92,7 +92,7 @@ function App() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/analyze", formData);
+      const response = await axios.post("fake-review-detector-production-cd23.up.railway.app", formData);
       setResults(response.data);
       addToast(`Successfully analyzed ${response.data.length} reviews.`, "success");
     } catch (error) {

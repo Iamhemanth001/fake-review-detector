@@ -29,8 +29,6 @@ backend/venv/
 __pycache__/
 *.pyc
 
-# Model files
-*.pkl
 
 # Node
 frontend/node_modules/
