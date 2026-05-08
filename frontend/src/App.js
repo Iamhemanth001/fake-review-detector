@@ -259,7 +259,7 @@ function App() {
               <Database size={20} className="model-info-icon" />
               <div className="model-info-text">
                 <h4>Training Data</h4>
-                <p>5000+ Reviews</p>
+                <p>40K+ Reviews</p>
               </div>
             </div>
             <div className="model-info-item">
